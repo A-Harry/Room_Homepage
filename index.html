@@ -1,13 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="/assets/img/favicon-32x32.png">
-        <title>Room homepage</title>
-    </head>
-    <body>
 
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/img/favicon-32x32.png">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>Room homepage</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav" id="navbar">
+            <nav class="nav-container">
+                <a href="#" class="nav-link nav-logo">
+                    <object type="image/svg+xml" data="./assets/img/logo.svg" class="logo"></object>
+                </a>
+                <div class="nav-list">
+                    <a href="#" class="nav-link">
+                        <span class="nav-name">home</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span class="nav-name">shop</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span class="nav-name">about</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span class="nav-name">contact</span>
+                    </a>
+                </div>
+                <div class="header-toggle">
+                    <i id="header_icon">
+                        <object type="image/svg+xml" data="./assets/img/icon-close.svg">
+                        </object>
+                    </i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="content-group1">
+            <div id="sequence">
+                <ul class="seq-canvas">
+                    <li class="step1">
+                        <div class="content">
+                            <h2 data-seq>Powered by Sequence.js</h2>
+                            <h3 data-seq>The open-source CSS animation framework</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="content-group2">
+            <section class="content-image" id="content-image2">
+                <span><img src="" alt=""></span>
+            </section>
+            <section>
+                <span>
+                    <p></p>
+                </span>
+            </section>
+        </div>
+    </main>
+
+    <!-- SEQUENCE.JS -->
+    <script src="node_modules/sequencejs/scripts/imagesloaded.pkgd.min.js"></script>
+    <script src="node_modules/sequencejs/scripts/hammer.min.js"></script>
+    <script src="node_modules/sequencejs/scripts/sequence.min.js"></script>
+    <script src="node_modules/sequencejs/scripts/sequence-theme.intro.js"></script>
+</body>
+
 </html>
