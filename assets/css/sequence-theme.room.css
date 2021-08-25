@@ -4,10 +4,11 @@
     width: 100%;
     height: 585px;
     max-width:100%;
-    overflow: hidden;
+    overflow-y: visible;
+    overflow-x: hidden;
     margin: 0 auto;
     padding: 0;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
 }
 
 /* Reset */
@@ -25,7 +26,6 @@
     height:100%;
     width:100%;
     white-space: nowrap;
-    font-size: 0;
 }
 
 /* Make the steps the same size as the container and sit side-by-side */
@@ -39,24 +39,40 @@
     color: white;
 }
 
-/* Used to vertically center align the .content element */
-#sequence .seq-canvas > li:before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    height:100%;
-}
+
 
 /* vertically center align the .content element */
-#sequence .content{
+#sequence .slide-content{
     display: inline-block;
     vertical-align: middle;
-    margin: 0 4%;
-    font-size: 16px;
+    /* font-size: 16px; */
+}
+
+
+#sequence .slide-image{
+    position:relative;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    height: 22rem;   
+}
+
+#sequence .slide-image.slide1{
+    background-image: url('../img/mobile-image-hero-1.jpg');
+}
+
+#sequence .slide-image.slide2{
+    background-image: url('../img/mobile-image-hero-2.jpg');
+}
+
+#sequence .slide-image.slide3{
+    background-image: url('../img/mobile-image-hero-3.jpg');
 }
 
 #sequence .step1{
-    background-color: #279fe5
+    /* background-color: #279fe5;
+    background-image: url("../img/mobile-image-hero-1.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #sequence .step2{
@@ -83,7 +99,28 @@
     font-size: 1.4em;
 }
 
-/* Animations */
+.slide-buttons{
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+}
+i.angle-icon{
+    width: 4rem;
+    height: 3.5rem;
+    background-color: black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+i.angle-icon:hover{
+    background-color: #242424;
+}
+i.angle-icon > object{
+    transform: scale(0.8);
+}
+/************** Animations *****************/
 
 /* Starting positions */
 #sequence h2, #sequence h3{

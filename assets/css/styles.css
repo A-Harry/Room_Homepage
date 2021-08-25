@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
 :root{
     --body-font: "Spartan", sans-serif;
+    --body-font-size: 12px;
     --font-medium: 500;
     --font-semi-bold: 600;
     --font-bold: 700;
@@ -16,7 +17,7 @@ body{
     font-family: var(--body-font);
     font-weight: 500;
     background-color: burlywood;
-    font-size: 11px;
+    font-size: var(--body-font-size);
 }
 
 *, ::before, ::after{
@@ -32,6 +33,14 @@ header{
     left: 0;
 }
 
+.header-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    padding: 1.7rem;
+    align-items: center;
+}
+
 .header-toggle{
     grid-row: 1;
     grid-column: 1;
@@ -43,7 +52,7 @@ header{
 
 .nav-container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -52,7 +61,7 @@ header{
 
 .nav-logo{
     text-align: center;
-    display: none;
+    display: block;
 }
 
 .nav-list{
