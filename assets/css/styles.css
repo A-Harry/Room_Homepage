@@ -15,7 +15,7 @@
 
 body{
     font-family: var(--body-font);
-    font-weight: 500;
+    font-weight: var(--font-medium);
     /* background-color: burlywood; */
     font-size: var(--body-font-size);
     margin: 0;
@@ -141,4 +141,33 @@ main {
     transform: scale(0.8);
     background-color: black;
     padding: 1rem 1.3rem;
+}
+
+.about-content{
+    padding: 2.5rem  2rem;
+}
+
+.shop{
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+}
+
+.description{
+    margin-bottom: 3rem;
+    line-height: 1.2rem;
+}
+
+.about-description{
+    line-height: 1.2rem;
+}
+
+p.about-header {
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+img{
+    width:100%
+    
 }

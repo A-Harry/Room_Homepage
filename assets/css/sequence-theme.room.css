@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
 /* Style the Sequence container */
 #sequence{
     position: relative;
@@ -48,6 +49,7 @@
     display: inline-block;
     vertical-align: middle;
     padding: 4rem 2rem;
+    /* line-height: 1.2rem; */
     /* font-size: 16px; */
 }
 
@@ -79,11 +81,11 @@
 }
 
 #sequence .step2{
-    background-color:#f96852;
+    /* background-color:#f96852; */
 }
 
 #sequence .step3 {
-    background-color: #2bbf8e;
+    /* background-color: #2bbf8e; */
 }
 
 #sequence h2, #sequence h3{
@@ -94,7 +96,6 @@
 
 #sequence h2 {
     margin-bottom: .5em;
-    font-family: 'Roboto', sans-serif;
     font-size: 2.6em;
 }
 
