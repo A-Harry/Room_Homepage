@@ -120,6 +120,7 @@ i.angle-icon{
 }
 i.angle-icon:hover{
     background-color: #242424;
+    cursor: pointer;
 }
 i.angle-icon > object{
     transform: scale(0.8);
@@ -159,3 +160,31 @@ i.angle-icon > object{
     transform: translate(0, 0);
 }
 
+/* ---------------- MEDIA QUERIES -------------------- */
+@media screen and (min-width:768px) {
+    #sequence .slide-image.slide1{
+        background-image: url("../img/desktop-image-hero-1.jpg");
+        width: 100%;
+        height: 100%
+    }
+    #sequence .slide-image.slide2{
+        background-image: url("../img/desktop-image-hero-2.jpg");
+    }
+    #sequence .slide-image.slide3{
+        background-image: url("../img/desktop-image-hero-3.jpg");
+    }
+
+    .slide-container{
+        display: flex;
+        width: 100%;
+        height: 28rem;
+    }
+
+    .slide-content{
+        width: 85%;
+    }
+
+    .about{
+        display: flex;
+    }
+}
