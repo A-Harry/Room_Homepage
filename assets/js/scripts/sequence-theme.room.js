@@ -6,6 +6,8 @@ var options ={
     fadeStepWhenSkipped: false,
     // autoPlay: true,
     // autoPlayInterval:3000,
+    nextButton: "#btnRight",
+    prevButton: "#btnLeft"
 }
 
 // Launch Sequence on the element, and with theoptions we specified above
