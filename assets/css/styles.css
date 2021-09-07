@@ -45,6 +45,11 @@ header{
     align-items: center;
 }
 
+.header-logo{
+    text-align: center;
+    display: block;
+}
+
 .header-toggle{
     grid-row: 1;
     grid-column: 1;
@@ -92,10 +97,7 @@ header{
     padding: 0rem 1.2rem 0 1.7rem;
 }
 
-.nav-logo{
-    text-align: center;
-    display: block;
-}
+
 
 .nav-list{
     display: flex;
@@ -138,7 +140,7 @@ main {
 }
 
 .icon object {
-    transform: scale(0.8);
+    transform: scale(1);
     background-color: black;
     padding: 1rem 1.3rem;
 }
@@ -157,6 +159,19 @@ main {
     line-height: 1.2rem;
 }
 
+.about-image{
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about .image1-dark{
+    background-image: url("../img/image-about-dark.jpg");
+
+}
+.about .image2-light{
+    background-image: url("../img//image-about-light.jpg");
+}
+
 .about-description{
     line-height: 1.2rem;
 }
@@ -171,3 +186,57 @@ img{
     width:100%
     
 }
+
+/* --------------- MEDIA QUERIES ----------------- */
+@media screen and (min-width: 768px){
+
+    header{
+        display: flex;
+    }
+
+    .header-container{
+        position: relative;
+        width: auto;
+        grid-template-columns: 1fr;
+        padding: 0;
+        padding-left: 3.5rem;
+    }
+
+
+    .header-toggle, .menu-icon{
+        display: none
+    }
+
+    .nav-logo{
+        text-align:left;
+    }
+
+    .nav{
+        top: 0;
+    }
+    .nav-container{
+        padding-left: 2rem;
+    }
+
+    .about-content{
+        width:100%;
+    }
+    .about-image{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .about-content{
+        padding:4rem 2rem;
+        width:100%;
+    }
+    img{
+        width:100%;
+        height:100%;
+    }
+    .about-image{
+        width: 95%;
+    }
+}
+
