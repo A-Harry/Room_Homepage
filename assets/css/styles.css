@@ -1,22 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
 :root{
     --body-font: "Spartan", sans-serif;
+    --body-font-size: 12px;
     --font-medium: 500;
     --font-semi-bold: 600;
     --font-bold: 700;
 
     /* HEADER */
-    --header-dark-grey: hsl(0, 0%, 63%);
+    --header-dark-grey: hsl(0, 0%, 63%, 30%);
     --header-height: 6.8rem;
-
+    --very-dark-grey: hsl(0, 0%, 27%, 30%);
     --z-index: 1000;
 }
 
 body{
     font-family: var(--body-font);
-    font-weight: 500;
-    background-color: burlywood;
-    font-size: 11px;
+    font-weight: var(--font-medium);
+    /* background-color: burlywood; */
+    font-size: var(--body-font-size);
+    margin: 0;
 }
 
 *, ::before, ::after{
@@ -24,12 +26,28 @@ body{
 }
 
 header{
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: var(--header-height);
-    background-color: rgba(139, 0, 0, 0.11);
+    /* background-color: rgba(139, 0, 0, 0.11); */
     top: 0;
     left: 0;
+    z-index: var(--z-index);
+}
+
+.header-container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    width:100%;
+    padding: 1.7rem;
+    align-items: center;
+}
+
+.header-logo{
+    text-align: center;
+    display: block;
 }
 
 .header-toggle{
@@ -38,7 +56,36 @@ header{
 }
 
 .nav{
+    position:relative;
     height: 100%;
+    transition: .5s;
+    top: -100%
+}
+
+.nav.show{
+    top: 0;
+    background-color: #121212;
+}
+
+.nav.show::after{
+    content:"";
+    height: 100%;
+    width:100%;
+    position: fixed;
+    background-color: var(--very-dark-grey);
+    animation: slide 1s;
+}
+
+@keyframes slide {
+    0%{
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    100%{
+        transform-origin: top;
+        transform: scaleY(1);
+
+    }
 }
 
 .nav-container{
@@ -50,10 +97,7 @@ header{
     padding: 0rem 1.2rem 0 1.7rem;
 }
 
-.nav-logo{
-    text-align: center;
-    display: none;
-}
+
 
 .nav-list{
     display: flex;
@@ -65,8 +109,26 @@ a{
     text-decoration: none;
 }
 
+a.nav-link{
+    position:relative;
+}
+a.nav-link::after{
+    content:"";
+    position: absolute;
+    left:50%;
+    bottom: 0;
+    height: .2rem;
+    width: 1.2rem;
+    transform: translate(-50%, .5rem);
+    transition: .5s
+
+}
+a.nav-link:hover::after{
+    background-color: white;
+}
+
 a.nav-link .nav-name{
-    color:beige;
+    color:white;
     font-weight: var(--font-semi-bold);
     font-size: 13px;
 }
@@ -78,8 +140,8 @@ main {
     /* width: 100%; */
     left: 0;
     top: 0;
-    position: fixed;
-    z-index: -2;
+    position: relative;
+
     width: 100%;
     height: 100%;
 }
@@ -95,8 +157,113 @@ main {
     height: inherit;
 }
 
-.icon object {
-    transform: scale(0.8);
-    background-color: black;
-    padding: 1rem 1.3rem;
+
+.about-content{
+    padding: 2.5rem  2rem;
 }
+
+.shop{
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    font-weight: var(--font-semi-bold);
+    color: black;
+}
+
+.description{
+    margin-bottom: 3rem;
+    line-height: 1.2rem;
+    color: #212529;
+}
+
+.about-image{
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about .image1-dark{
+    background-image: url("../img/image-about-dark.jpg");
+
+}
+.about .image2-light{
+    background-image: url("../img//image-about-light.jpg");
+}
+
+.about-description{
+    line-height: 1.2rem;
+    color: #212529
+}
+
+p.about-header {
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+img{
+    width:100%
+    
+}
+
+
+/* --------------- MEDIA QUERIES ----------------- */
+@media screen and (min-width: 320px){
+    .about-image{
+        height:15rem
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    header{
+        display: flex;
+    }
+
+    .header-container{
+        position: relative;
+        width: auto;
+        grid-template-columns: 1fr;
+        padding: 0;
+        padding-left: 3.5rem;
+    }
+
+
+    .header-toggle, .menu-icon{
+        display: none
+    }
+
+    .nav-logo{
+        text-align:left;
+    }
+
+    .nav{
+        top: 0;
+    }
+    .nav-container{
+        padding-left: 2rem;
+    }
+
+    .about{
+        display: flex;
+    }
+    .about-content{
+        width:100%;
+    }
+    .about-image{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .about-content{
+        padding:4rem 2rem;
+        width:100%;
+    }
+    img{
+        width:100%;
+        height:100%;
+    }
+    .about-image{
+        width: 95%;
+    }
+}
+

@@ -5,18 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/img/favicon-32x32.png">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="icon" href="./assets/img/favicon-32x32.png">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/sequence-theme.room.css">
     <title>Room homepage</title>
 </head>
 
 <body>
     <header>
+        <div class="header-container">
+            <a href="#" class="header-logo">
+                <object type="image/svg+xml" data="./assets/img/logo.svg" class="logo"></object>
+            </a>
+
+            <div class="header-toggle">
+                <i class="menu-icon">
+                    <svg id="menu__hamburger" width="20" height="14" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 12v2H0v-2h20zm0-6v2H0V6h20zm0-6v2H0V0h20z" fill="#FFF" fill-rule="evenodd" />
+                    </svg>
+                </i>
+            </div>
+        </div>
         <div class="nav" id="navbar">
             <nav class="nav-container">
-                <a href="#" class="nav-link nav-logo">
-                    <object type="image/svg+xml" data="./assets/img/logo.svg" class="logo"></object>
-                </a>
+                <i class="menu-icon">
+                    <svg id="menu__close" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.364.222l1.414 1.414L9.414 8l6.364 6.364-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414L6.586 8 .222 1.636 1.636.222 8 6.586 14.364.222z"
+                            fill="#FFF" fill-rule="evenodd" opacity=".301" />
+                    </svg>
+                </i>
+
                 <div class="nav-list">
                     <a href="#" class="nav-link">
                         <span class="nav-name">home</span>
@@ -31,47 +50,118 @@
                         <span class="nav-name">contact</span>
                     </a>
                 </div>
-                <div class="header-toggle">
-                    <i id="header_icon">
-                        <object type="image/svg+xml" data="./assets/img/icon-close.svg">
-                        </object>
-                    </i>
-                </div>
             </nav>
         </div>
     </header>
     <main>
-        <div class="content-group1">
-            <div id="sequence">
+        <div id="sequence" class="content-container">
+            <div class="canvas-block">
                 <ul class="seq-canvas">
-                    <li class="step1">
-                        <div class="content">
-                            <h2 data-seq>Powered by Sequence.js</h2>
-                            <h3 data-seq>The open-source CSS animation framework</h3>
+                    <li class="step1 seq-in">
+                        <div class="slide-container">
+                            <div class="slide-image slide1">
+                                <span class="slide-buttons">
+                                    <i class="angle-icon" id="btnLeft">
+                                        <svg class="angle-left" width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd" stroke-width="2px"/></svg>                                    </i>
+                                    <i class="angle-icon" id="btnRight">
+                                        <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd" stroke-width="2px"/></svg>                                    </i>
+                                </span>
+                            </div>
+                            <div class="slide-content slide1">
+                                <h2>Discover innovative ways to decorate</h2>
+                                <p class="description">
+                                    We provide unmatched quality, comfort, and style for property owners across the
+                                    country.
+                                    Our experts combine form and function in bringing your vision to life. Create a room
+                                    in
+                                    your
+                                    own style with our collection and make your property a reflection of you and what
+                                    you
+                                    love.
+                                </p>
+                                <a class="shop" href="#">
+                                    <span class="shop-now text">Shop Now</span>
+                                    <span class="shop-now icon"><svg width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/></svg></span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="step2">
+                        <div class="slide-container">
+                            <div class="slide-image slide2">
+                                <span class="slide-buttons">
+                                    <i class="angle-icon" id="btnLeft">
+                                        <svg class="angle-left" width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd" stroke-width="2px"/></svg>                                    </i>
+                                    <i class="angle-icon" id="btnRight">
+                                        <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd" stroke-width="2px"/></svg>                                    </i>
+                                </span>
+                            </div>
+                            <div class="slide-content slide2">
+                                <h2>We are available all across the globe</h2>
+                                <p class="description">
+                                    With stores all over the world, it's easy for you to find furniture for your home or place of business. 
+                                    Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
+                                    store locator. Any questions? Don't hesitate to contact us today.                                  
+                                </p>
+                                <a class="shop" href="#">
+                                    <span class="shop-now text">Shop Now</span>
+                                    <span class="shop-now icon"><svg width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/></svg></span>
+                                </a>
+                              
+                            </div>
+                        </div>
+                    </li>
+                    <li class="step3">
+                        <div class="slide-container">
+                            <div class="slide-image slide3">
+                                <span class="slide-buttons">
+                                    <i class=" angle-icon" id="btnLeft">
+                                        <svg class="angle-left" width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd" stroke-width="2px"/></svg>                                    </i>
+                                    <i class=" angle-icon" id="btnRight">
+                                        <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd" stroke-width="2px"/></svg>                                    </i>
+                                </span>
+                            </div>
+                            <div class="slide-content slide3">
+                                <h2>Manufactured with the best materieals</h2>
+                                <p class="description">
+                                    Our modern furniture store provide a high level of quality. Our company has invested in advanced technology
+                                    to ensure that every product is made as perfect and as consisten as possible. With three decades of
+                                    experience in this industry, we understand what customers want for their home and office.
+                                </p>
+                                <a class="shop" href="#">
+                                    <span class="shop-now text">Shop Now</span>
+                                    <span class="shop-now icon"><svg width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/></svg></span>
+                                </a>
+                            </div>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-
-        
-        <div class="content-group2">
-            <section class="content-image" id="content-image2">
-                <span><img src="" alt=""></span>
+        <div class="about">
+            <section class="about-image image1-dark">
             </section>
-            <section>
-                <span>
-                    <p></p>
-                </span>
+            <section class="about-content">
+                <p class="about-header">About our furniture</p>
+                <p class="about-description">
+                    Our multifunctional collection blends design and function to suit your individual taste.
+                    Make each room unique, or pick a cohesive theme that best express your interests and what
+                    inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+                    or anything in between. Product specialists are available to help you create your dream space.
+                </p>
+            </section>
+            <section class="about-image image2-light">
             </section>
         </div>
     </main>
 
     <!-- SEQUENCE.JS -->
-    <script src="node_modules/sequencejs/scripts/imagesloaded.pkgd.min.js"></script>
-    <script src="node_modules/sequencejs/scripts/hammer.min.js"></script>
-    <script src="node_modules/sequencejs/scripts/sequence.min.js"></script>
-    <script src="node_modules/sequencejs/scripts/sequence-theme.intro.js"></script>
+    <script src="assets/js/scripts/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/scripts/hammer.min.js"></script>
+    <script src="assets/js/scripts/sequence.min.js"></script>
+    <script src="assets/js/scripts/sequence-theme.room.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

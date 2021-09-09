@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+/* Style the Sequence container */
+#sequence{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width:100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    /* font-family: sans-serif; */
+}
+
+/* Reset */
+#sequence .seq-canvas,
+#sequence .seq-canvas > *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Make the canvas the same dimensions as the container and prevent
+    Wrapping so each step can sit side-by-side */
+#sequence .seq-canvas{
+    /* position:absolute; */
+    height:100%;
+    width:100%;
+    white-space: nowrap;
+}
+
+#sequence .canvas-block{
+    height: 100%;
+}
+
+/* Make the steps the same size as the container and sit side-by-side */
+#sequence .seq-canvas > * {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height:100%;
+    white-space: normal;
+
+}
+
+
+
+/* vertically center align the .content element */
+#sequence .slide-content{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 4rem 2rem;
+    /* line-height: 1.2rem; */
+    /* font-size: 16px; */
+}
+
+
+#sequence .slide-image{
+    position:relative;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    height: 22rem;   
+}
+
+#sequence .slide-image.slide1{
+    background-image: url('../img/mobile-image-hero-1.jpg');
+}
+
+#sequence .slide-image.slide2{
+    background-image: url('../img/mobile-image-hero-2.jpg');
+}
+
+#sequence .slide-image.slide3{
+    background-image: url('../img/mobile-image-hero-3.jpg');
+}
+
+#sequence .step1{
+    /* background-color: #279fe5;
+    background-image: url("../img/mobile-image-hero-1.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sequence .step2{
+    /* background-color:#f96852; */
+}
+
+#sequence .step3 {
+    /* background-color: #2bbf8e; */
+}
+
+#sequence h2, #sequence h3{
+    margin: 0;
+    display: block;
+    line-height: 120%;
+}
+
+#sequence h2 {
+    margin-bottom: 0.7em;
+    font-size: 2.3em;
+}
+
+#sequence h3 {
+    font-size: 1.4em;
+}
+
+.slide-buttons{
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+}
+i.angle-icon{
+    width: 4rem;
+    height: 3.5rem;
+    background-color: black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+i.angle-icon:hover{
+    background-color: #242424;
+    cursor: pointer;
+}
+i.angle-icon > object{
+    transform: scale(1);
+}
+/************** Animations *****************/
+
+/* Starting positions */
+#sequence h2, #sequence h3{
+    opacity: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+#sequence h2{
+    -webkit-transform: translate(0, -20px);
+    transform: translate(0, -20px);
+}
+
+#sequence h3{
+    -webkit-transform: translate(0, 20px);
+    transform: translate(0, 20px);
+}
+
+/* Animate in positions for content */
+#sequence .seq-in h2,
+#sequence .seq-in h3 {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+/* Animate out positions for content */
+#sequence .seq-out h2, 
+#sequence .seq-out h3 {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+
+/* ---------------- MEDIA QUERIES -------------------- */
+
+
+@media screen and (min-width:768px) {
+    #sequence .slide-image.slide1{
+        background-image: url("../img/desktop-image-hero-1.jpg");
+        width: 100%;
+        height: 100%
+    }
+    #sequence .slide-image.slide2{
+        background-image: url("../img/desktop-image-hero-2.jpg");
+    }
+    #sequence .slide-image.slide3{
+        background-image: url("../img/desktop-image-hero-3.jpg");
+    }
+    #sequence .slide-image{
+        width: 100%;
+        height: 100%;
+    }
+
+    #sequence h2{
+        font-size: 2em;
+    }
+
+    .slide-container{
+        display: flex;
+        width: 100%;
+        height: 28rem;
+        align-items: center;
+    }
+    #sequence .slide-content{
+        padding: 4rem 3rem;
+        width:70%;
+    }
+
+    i.angle-icon{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .slide-content{
+        width: 85%;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    #sequence h2{
+        font-size: 2.5em;
+    }
+
+    #sequence .slide-container{
+        height: 32rem;
+    }
+    #sequence .slide-content{
+        padding: 4rem;
+        width: 80%;
+    }
+
+    .slide-buttons{
+        transform: translateX(10rem);
+    }
+    i.angle-icon{
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    #sequence .slide-container{
+        height: 34rem;
+    }
+    .about-image{
+        width: 100%;
+    }
+
+    i.angle-icon{
+        width:5.5rem;
+        height:6rem;
+    }
+    .slide-buttons{
+        transform: translateX(11rem);
+    }
+    #sequence .slide-content{
+        width:74%;
+    }
+    #sequence h2 {
+        font-size: 3.3em;
+    }
+}
