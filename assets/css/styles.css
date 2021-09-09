@@ -109,8 +109,26 @@ a{
     text-decoration: none;
 }
 
+a.nav-link{
+    position:relative;
+}
+a.nav-link::after{
+    content:"";
+    position: absolute;
+    left:50%;
+    bottom: 0;
+    height: .2rem;
+    width: 1.2rem;
+    transform: translate(-50%, .5rem);
+    transition: .5s
+
+}
+a.nav-link:hover::after{
+    background-color: white;
+}
+
 a.nav-link .nav-name{
-    color:beige;
+    color:white;
     font-weight: var(--font-semi-bold);
     font-size: 13px;
 }
@@ -139,11 +157,6 @@ main {
     height: inherit;
 }
 
-.icon object {
-    transform: scale(1);
-    background-color: black;
-    padding: 1rem 1.3rem;
-}
 
 .about-content{
     padding: 2.5rem  2rem;
@@ -152,11 +165,14 @@ main {
 .shop{
     letter-spacing: 1rem;
     text-transform: uppercase;
+    font-weight: var(--font-semi-bold);
+    color: black;
 }
 
 .description{
     margin-bottom: 3rem;
     line-height: 1.2rem;
+    color: #212529;
 }
 
 .about-image{
@@ -174,6 +190,7 @@ main {
 
 .about-description{
     line-height: 1.2rem;
+    color: #212529
 }
 
 p.about-header {
@@ -187,7 +204,14 @@ img{
     
 }
 
+
 /* --------------- MEDIA QUERIES ----------------- */
+@media screen and (min-width: 320px){
+    .about-image{
+        height:15rem
+    }
+}
+
 @media screen and (min-width: 768px){
 
     header{
@@ -218,6 +242,9 @@ img{
         padding-left: 2rem;
     }
 
+    .about{
+        display: flex;
+    }
     .about-content{
         width:100%;
     }
